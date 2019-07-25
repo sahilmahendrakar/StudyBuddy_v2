@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:studybuddy/widgets/speedDial.dart';
+import 'package:studybuddy/ui/speedDial.dart';
 
 void main() => runApp(MyApp());
 
