@@ -47,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
               //----------------------Date Left Button----------------------------
               IconButton(
                 icon: Icon(Icons.arrow_back_ios),
-                onPressed: null,
+                onPressed: () => {
+                  time = time.subtract(Duration(days: 1))
+                },
                 iconSize: 33,
               ),
 
@@ -66,7 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
               IconButton(
                 icon: Icon(Icons.arrow_forward_ios),
-                onPressed: null,
+                onPressed: () => {
+                  time = time.add(Duration(days: 1))
+                },
                 iconSize: 33,
               ),
 
