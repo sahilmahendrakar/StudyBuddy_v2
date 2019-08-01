@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './ui/speedDial.dart';
-import 'package:intl/intl.dart';
+import './ui/dateTop.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,7 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  DateTime time = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -39,44 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        
-            children: <Widget>[
-              //----------------------Date Left Button----------------------------
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios),
-                onPressed: () => {
-                  time = time.subtract(Duration(days: 1))
-                },
-                iconSize: 33,
-              ),
-
-              Container(
-                child: Text(
-                  DateFormat("yMMMd").format(time),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal, 
-                    fontSize: 35,
-                    letterSpacing: -2,
-                    color: Colors.grey[600],
-                  ),
-                ),
-              ),
-
-              IconButton(
-                icon: Icon(Icons.arrow_forward_ios),
-                onPressed: () => {
-                  time = time.add(Duration(days: 1))
-                },
-                iconSize: 33,
-              ),
-
-              //----------------------Date Right Button----------------------------
-            ],
-          ),
+          //----------------------This is the date at the top----------------------------
+          dateTop(),
 
           //----------------------Calendar and rest (page maybe) go here----------------------------
         ],
