@@ -42,9 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            
-            //Hey
-            
+                        
             children: <Widget>[
               //----------------------Date Left Button----------------------------
               IconButton(
