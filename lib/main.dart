@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:studybuddy/ui/speedDial.dart';
+import './ui/speedDial.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,44 +29,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  bool actionPressed = false;
-
-  Widget floatingActionPressed() {
-    if (actionPressed == true) {
-      actionPressed = false;
-      return Icon(Icons.add_location); 
-    }
-    return Icon(Icons.add);
-  }
+  DateTime time = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
-    actionPressed = false;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          Row(
+            
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            
+            
+            children: <Widget>[
+              //----------------------Date Left Button----------------------------
+              IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                onPressed: null,
+                iconSize: 33,
+              ),
+
+              Container(
+                child: Text(
+                  DateFormat("yMMMd").format(time),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal, 
+                    fontSize: 35,
+                    letterSpacing: -2,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ),
+
+              IconButton(
+                icon: Icon(Icons.arrow_forward_ios),
+                onPressed: null,
+                iconSize: 33,
+              ),
+
+              //----------------------Date Right Button----------------------------
+            ],
+          ),
+
+          //----------------------Calendar and rest (page maybe) go here----------------------------
+        ],
       ),
       floatingActionButton: optionButton(),
     );

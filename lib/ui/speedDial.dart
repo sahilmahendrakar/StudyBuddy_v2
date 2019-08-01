@@ -18,7 +18,7 @@ class optionButton extends StatelessWidget {
               //child: Icon(Icons.date_range),
               child: Icon(Icons.event),
               backgroundColor: Colors.white,
-              foregroundColor: Colors.blue[900],              
+              foregroundColor: Colors.blue[800],              
               label: 'Add Event',
               labelStyle: TextStyle(fontSize: 12.5),
               onTap: () => {}
@@ -26,7 +26,7 @@ class optionButton extends StatelessWidget {
             SpeedDialChild(
               child: Icon(Icons.assignment),
               backgroundColor: Colors.white,
-              foregroundColor: Colors.blue[900],
+              foregroundColor: Colors.blue[800],
               label: 'Add Assignment',
               labelStyle: TextStyle(fontSize: 12.5),
               onTap: () => {},
@@ -35,7 +35,7 @@ class optionButton extends StatelessWidget {
               //child: Icon(Icons.apps),
               child: Icon(Icons.class_),
               backgroundColor: Colors.white,
-              foregroundColor: Colors.blue[900],
+              foregroundColor: Colors.blue[800],
               label: 'Add Category',
               labelStyle: TextStyle(fontSize: 12.5),
               onTap: () => {},
