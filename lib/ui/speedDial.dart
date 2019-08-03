@@ -9,10 +9,10 @@ class optionButton extends StatelessWidget {
     return SpeedDial(
           child: Icon(Icons.add),
           animatedIcon: AnimatedIcons.menu_close,
+          animatedIconTheme: IconThemeData(size: 24.0),
           closeManually: true,
           curve: Curves.bounceIn,
           tooltip: 'Add',
-          elevation: 8.0,
           children: [
             SpeedDialChild(
               //child: Icon(Icons.calendar_today),
@@ -21,16 +21,30 @@ class optionButton extends StatelessWidget {
               backgroundColor: Colors.white,
               foregroundColor: Colors.blue[800],              
               label: 'Add Event',
-              labelStyle: TextStyle(fontSize: 12.5),
-              onTap: () => {}
+              labelBackgroundColor: Colors.grey[800],
+              labelStyle: TextStyle(
+                fontSize: 14,
+                color: Colors.grey[200],
+                height: 1,
+                fontFamily: "Arial",
+                //fontWeight: FontWeight.bold,
+                ),
+              onTap: () => {},
             ),
             SpeedDialChild(
               child: Icon(Icons.assignment),
               backgroundColor: Colors.white,
               foregroundColor: Colors.blue[800],
               label: 'Add Assignment',
-              labelStyle: TextStyle(fontSize: 12.5),
-              onTap: () => {},
+              labelBackgroundColor: Colors.grey[800],
+              labelStyle: TextStyle(
+                fontSize: 14,
+                color: Colors.grey[200],
+                height: 1,
+                fontFamily: "Arial",
+                //fontWeight: FontWeight.bold,
+              ),
+                onTap: () => {},
             ),
             SpeedDialChild(
               //child: Icon(Icons.apps),
@@ -38,7 +52,14 @@ class optionButton extends StatelessWidget {
               backgroundColor: Colors.white,
               foregroundColor: Colors.blue[800],
               label: 'Add Category',
-              labelStyle: TextStyle(fontSize: 12.5),
+              labelBackgroundColor: Colors.grey[800],
+              labelStyle: TextStyle(
+                fontSize: 14,
+                color: Colors.grey[200],
+                height: 1,
+                fontFamily: "Arial",
+                //fontWeight: FontWeight.bold,
+              ),
               onTap: () => {},
             ),
           ],
