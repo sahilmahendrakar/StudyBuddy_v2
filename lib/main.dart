@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import './screens/addAssignment.dart';
+import './screens/addCategory.dart';
+import './screens/addEvent.dart';
+
 import './ui/speedDial.dart';
 import './ui/dateTop.dart';
 
@@ -16,6 +20,12 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.blue,
       ),
       home: MyHomePage(title: 'Study Buddy'),
+      initialRoute: "/",
+      routes: {
+        addEventScreen.routeName : (context) => addEventScreen(),
+        addAssignmentScreen.routeName : (context) => addAssignmentScreen(),
+        addCategoryScreen.routeName : (context) => addCategoryScreen(),
+      },
     );
   }
 }

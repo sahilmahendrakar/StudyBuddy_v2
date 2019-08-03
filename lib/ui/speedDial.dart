@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:provider/provider.dart';
 
 class optionButton extends StatelessWidget {
   @override
@@ -29,7 +29,9 @@ class optionButton extends StatelessWidget {
                 fontFamily: "Arial",
                 //fontWeight: FontWeight.bold,
                 ),
-              onTap: () => {},
+              onTap: () => {
+                Navigator.pushNamed(context, "/addEvent")
+              },
             ),
             SpeedDialChild(
               child: Icon(Icons.assignment),
@@ -44,7 +46,9 @@ class optionButton extends StatelessWidget {
                 fontFamily: "Arial",
                 //fontWeight: FontWeight.bold,
               ),
-                onTap: () => {},
+                onTap: () => {
+                  Navigator.pushNamed(context, "/addAssignment")
+                },
             ),
             SpeedDialChild(
               //child: Icon(Icons.apps),
@@ -60,7 +64,9 @@ class optionButton extends StatelessWidget {
                 fontFamily: "Arial",
                 //fontWeight: FontWeight.bold,
               ),
-              onTap: () => {},
+              onTap: () => {
+                Navigator.pushNamed(context, "/addCategory")
+              },
             ),
           ],
         );

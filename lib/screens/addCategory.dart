@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class addEventScreen extends StatefulWidget {
+class addCategoryScreen extends StatefulWidget {
   @override
-  _addEventScreenState createState() => _addEventScreenState();
+  _addCategoryScreenState createState() => _addCategoryScreenState();
 
-  static const routeName = "/addEvent";
+    static const routeName = "/addCategory";
+
 }
 
-class _addEventScreenState extends State<addEventScreen> {
+class _addCategoryScreenState extends State<addCategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Event'),
+        title: Text('Add Catergory'),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('New Event Screen'),
+          child: Text('New Catergory Screen'),
           onPressed: () {
             Navigator.pop(context);
           },
