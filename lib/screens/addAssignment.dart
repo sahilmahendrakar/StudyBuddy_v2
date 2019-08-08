@@ -38,9 +38,10 @@ class _addAssignmentScreenState extends State<addAssignmentScreen> {
             child: TextField(
               controller: titleController, 
               decoration: InputDecoration (
-                labelText: "Assignment Name"
+                labelText: "Assignment Name",
+                contentPadding: EdgeInsets.symmetric(vertical: -2),
               ), 
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 17.5),
             ),
             margin: EdgeInsets.symmetric(vertical: 10),
 
@@ -50,9 +51,10 @@ class _addAssignmentScreenState extends State<addAssignmentScreen> {
             child: TextField(
               controller: descriptionController, 
               decoration: InputDecoration (
-                labelText: "Description"
+                labelText: "Description",
+                contentPadding: EdgeInsets.symmetric(vertical: -2),
               ), 
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 17.5),
             ),
             margin: EdgeInsets.symmetric(vertical: 10),
 

@@ -50,7 +50,8 @@ class _addCategoryScreenState extends State<addCategoryScreen> {
             child: TextField(
               controller: titleController, 
               decoration: InputDecoration (
-                labelText: "Category Name"
+                labelText: "Category Name",
+                contentPadding: EdgeInsets.symmetric(vertical: -2),
               ), 
               style: TextStyle(fontSize: 20),
             ),
