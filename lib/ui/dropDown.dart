@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class colorPicker extends StatefulWidget {
+class dropDown extends StatefulWidget {
   @override
-  _colorPickerState createState() => _colorPickerState();
+  _dropDownState createState() => _dropDownState();
 }
 
-class _colorPickerState extends State<colorPicker> {
+class _dropDownState extends State<dropDown> {
   String dropdownValue = 'One';
   
   @override

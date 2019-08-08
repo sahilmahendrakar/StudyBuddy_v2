@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../ui/colorPicker.dart';
+import '../ui/dropDown.dart';
 
 class addCategoryScreen extends StatefulWidget {
   @override
@@ -36,9 +36,10 @@ class _addCategoryScreenState extends State<addCategoryScreen> {
           Container (
             width: .9 * MediaQuery.of(context).size.width,
             child: Text(
-              "Add Category", 
+              "Add a Category", 
               style: TextStyle(
                 fontSize: 25,
+                fontWeight: FontWeight.w500,
               ),
             ),
             alignment: Alignment.topLeft,
@@ -56,15 +57,18 @@ class _addCategoryScreenState extends State<addCategoryScreen> {
             margin: EdgeInsets.symmetric(vertical: 10),
 
           ),
-          colorPicker(),
+          dropDown(),
           Container(
             width: .9 * MediaQuery.of(context).size.width,
-            margin: EdgeInsets.only(top: .475 * MediaQuery.of(context).size.height ),
-
-            child: IconButton(
-              color: Colors.black,
+            margin: EdgeInsets.only(top: .45 * MediaQuery.of(context).size.height ),
+            child: RaisedButton(
+              color: Colors.blue,
+              padding: EdgeInsets.symmetric(vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(25.0))
+              ),
               //Currently goes back to main page.
-              icon: Icon(Icons.add, color: Colors.red),
+              child: Icon(Icons.add, color: Colors.white),
               onPressed: () {
                 Navigator.pop(context);
               },
