@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import '../ui/dropDown.dart';
@@ -59,7 +61,18 @@ class _addAssignmentScreenState extends State<addAssignmentScreen> {
             margin: EdgeInsets.symmetric(vertical: 10),
 
           ),
-          dropDown(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              dropDown(),
+              RaisedButton(
+                child: Icon(Icons.add),
+                color: Colors.grey,
+                onPressed: null,
+              ),
+              
+            ],
+          ),
           Container(
             width: .9 * MediaQuery.of(context).size.width,
             margin: EdgeInsets.only(top: .45 * MediaQuery.of(context).size.height ),
